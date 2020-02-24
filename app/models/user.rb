@@ -2,6 +2,9 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable
   has_many :articles, dependent: :destroy
+  has_many :votes, foreign_key: 'user_id'
+  has_many :voteds, through: :votes, source: :article
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook]
 
@@ -28,5 +31,17 @@ class User < ApplicationRecord
         user.email = data['email'] if user.email.blank?
       end
     end
+  end
+
+  def vote(article)
+    voteds << article
+  end
+
+  def unvote(article)
+    voteds.delete(article)
+  end
+
+  def voted_article?(article)
+    voteds.include?(article)
   end
 end

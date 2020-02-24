@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "users/:id" => "users#show", as: :user
 
   resources :articles
+  resources :votes
 end
