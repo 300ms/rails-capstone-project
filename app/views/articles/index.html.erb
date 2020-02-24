@@ -1,0 +1,7 @@
+<h1>Articles</h1>
+<%= create_article_link %>
+<ul class="user-article-index">
+  <% @articles.each do |article| %>
+    <li><%= render article %></li>
+  <% end %>
+<ul>

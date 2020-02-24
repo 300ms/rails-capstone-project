@@ -1,0 +1,11 @@
+<div class="article-container">
+  <%= render @article %>
+  <% user = User.find(@article.author_id) %>
+  <p>Author: <%= user.name %></p>
+  <p>
+    <% if user_signed_in? %>
+      <%= link_to "Delete" , article_path(@article), method: :delete,data: {confirm: "Are you sure ?"} %>
+    <% end %>
+    <%= link_to "Articles" , articles_path %>
+  </p>
+</div>
