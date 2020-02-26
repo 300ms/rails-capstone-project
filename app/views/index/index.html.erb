@@ -1,1 +1,9 @@
-<h1>INDEX PAGE</h1>
+<h1>Top 5 Articles</h1>
+<ul class="top3-list">
+<% i=1 %>
+  <% @top5.each do |art|%>
+    <% article = Article.find(art[0]) %>
+    <li class="best-<%= i %>"><%= render article %></li>
+    <% i=i+1 %>
+  <% end %>
+</ul>

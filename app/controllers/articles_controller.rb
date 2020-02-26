@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order('articles.created_at DESC')
     @logged_in = user_signed_in?
   end
 

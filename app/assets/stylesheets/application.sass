@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import bootstrap
+
+@mixin border-style
+  border-radius: 5px
+  border-width: medium
+  border-color: white
+  border-style: solid
+
+@mixin flex-center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+body
+  background-color: black
+  color: white
+  input
+    color: black
+  a
+    color: #7FDBFF
+    &:hover
+      color: #39CCCC
+    &:active
+      color: #2ECC40
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+  h1
+    margin: 10px auto
+    width: 250px
+    text-align: center
+
+
+.header
+  height: fit-content
+
+.navbar
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  background-color: gray
+  height: 50px
+
+.nav-div
+  display: inline-flex
+  flex-direction: column
+  align-items: flex-end
+  border: 0
+  p
+    margin: 0
+  a, p
+    margin-right: 25px
+  h3
+    align-self: center
+    margin: 0
+
+.border-split
+  border-right: 2px
+  border-color: black
+  border-style: solid
+
+.category-list,
+.user-menu
+  display: flex
+  flex-direction: row
+  align-items: center
+  margin: 0
+
+.top3-list
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  height: 500px
+  padding: 0 5%
+  li
+    @include border-style
+    @include flex-center
+    width: 50%
+    height: 45%
+    margin: 10px
+  .best-1
+    width: 50%
+    height: 100%
+
+.user-article-index,
+.user-post-index
+  @include flex-center
+  li
+    @include border-style
+    @include flex-center
+    width: 50%
+    margin-bottom: 15px

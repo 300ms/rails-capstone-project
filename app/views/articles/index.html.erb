@@ -1,8 +1,6 @@
 <h1>Articles</h1>
-<%= create_article_link %>
 <ul class="user-article-index">
   <% @articles.each do |article| %>
     <li><%= render article %></li>
-    <%= link_to Category.find(article.category_id).name, category_path(article.category_id) %>
   <% end %>
 <ul>
