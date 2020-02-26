@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :votes
+  resources :categories
 end

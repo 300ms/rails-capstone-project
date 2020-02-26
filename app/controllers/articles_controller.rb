@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   def show
@@ -12,6 +13,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.author_id = current_user.id
+    @article.category_id = params[:category_id]
     if @article.save
       flash[:success] = "You've posted successfully!"
       redirect_to articles_path

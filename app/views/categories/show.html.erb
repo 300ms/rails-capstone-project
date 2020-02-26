@@ -1,0 +1,6 @@
+<h1>Category: <%= @category.name %></h1>
+<ul class="user-article-index">
+  <% @articles.each do |article| %>
+    <li><%= render article %></li>
+  <% end %>
+<ul>
