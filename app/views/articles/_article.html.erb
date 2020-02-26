@@ -1,3 +1,4 @@
+  <%= image_tag article.image.url if article.image? %>
   <h3> <%= link_to article.title, article_path(article) %> </h3>
   <p><%= article.text %></p>
   <h6>Updated at: <%= article.updated_at %></h6>

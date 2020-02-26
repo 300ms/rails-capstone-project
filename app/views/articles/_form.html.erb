@@ -10,6 +10,8 @@
 
       <%= select_tag(:category_id, options_for_select(@categories)) %>
 
+      <%= f.file_field :picture %>
+
       <%= f.submit "Create Article" %>
     <% end %>
   </div>
