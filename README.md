@@ -126,14 +126,14 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
+Distributed under the MIT License.
+https://github.com/300ms/rails-capstone-project/blob/readme-rubocop/LICENSE
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - ilhansnmz44@gmail.com
+İlhan Sönmez - ilhansnmz44@gmail.com
 
 Project Link: [Github Repository](https://github.com/300ms/rails-capstone-project/)
 
