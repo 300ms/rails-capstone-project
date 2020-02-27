@@ -68,6 +68,7 @@ end
 group :production do
   #add fog gem to production for uploading images
   gem 'fog', '1.42'
+
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

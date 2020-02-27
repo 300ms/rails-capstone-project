@@ -1,6 +1,13 @@
 <h1>Articles</h1>
 <ul class="user-article-index">
   <% @articles.each do |article| %>
-    <li><%= render article %></li>
+    <li>
+      <div class="article-image background-image">
+        <%= image_tag article.image.url if article.image? %>
+      </div>
+      <div class="article-container">
+        <%= render article %>
+      </div>
+    </li>
   <% end %>
 <ul>

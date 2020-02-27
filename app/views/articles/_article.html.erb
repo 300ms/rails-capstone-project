@@ -1,9 +1,11 @@
-  <%= image_tag article.image.url if article.image? %>
+<div class="article-header">
   <h3> <%= link_to article.title, article_path(article) %> </h3>
   <p><%= article.text %></p>
   <h6>Updated at: <%= article.updated_at %></h6>
   <h6> <%= article_user_name(article) %> </h6>
   <% unless current_user.nil? %>
+</div>
+<div class="article-footer">
   <div class="vote-unvote">
     <% unless current_user.voted_article?(article) %>
       <%= form_for(current_user.votes.build) do |f| %>
@@ -24,3 +26,4 @@
   <div class="article-category">
     <%= link_to Category.find(article.category_id).name, category_path(article.category_id) %>
   </div>
+</div>

@@ -3,7 +3,13 @@
 <% i=1 %>
   <% @top5.each do |art|%>
     <% article = Article.find(art[0]) %>
-    <li class="best-<%= i %>"><%= render article %></li>
+
+    <li class="best-<%= i %>">
+      <div class="article-image background-image">
+        <%= image_tag article.image.url if article.image? %>
+      </div>
+      <%= render article %>
+    </li>
     <% i=i+1 %>
   <% end %>
 </ul>

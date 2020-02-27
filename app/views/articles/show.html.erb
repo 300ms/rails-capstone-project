@@ -1,4 +1,7 @@
-<div class="article-container">
+<div class="user-article-index">
+  <div class="header-image">
+    <%= image_tag @article.image.url if @article.image? %>
+  </div>
   <%= render @article %>
   <% user = User.find(@article.author_id) %>
   <p>Author: <%= user.name %></p>
