@@ -24,6 +24,6 @@
     <p>Votes: <%= article.votes.count %></p>
   </div>
   <div class="article-category">
-    <%= link_to Category.find(article.category_id).name, category_path(article.category_id) %>
+    <%= link_to Category.find(article.category_id).name, category_path(article.category_id) if article.category_id %>
   </div>
 </div>
