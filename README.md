@@ -164,5 +164,5 @@ Deployment on heroku: [Github Repository](https://calm-meadow-41535.herokuapp.co
 [issues-shield]: https://img.shields.io/github/issues/300ms/rails-capstone-project
 [issues-url]: https://github.com/300ms/rails-capstone-project/issues
 [license-shield]: https://img.shields.io/github/license/300ms/rails-capstone-project
-[license-url]:
+[license-url]: https://github.com/300ms/rails-capstone-project/blob/readme-rubocop/LICENSE
 [product-screenshot]: images/screenshot.png
