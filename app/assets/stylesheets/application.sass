@@ -136,3 +136,26 @@ body
   z-index: -1
   img
     max-width: 100%
+
+.field
+  @include flex-center
+  input
+    align-self: center
+.browse
+  width: 111px
+  margin: 10px 0
+
+.create-article,
+#new_user
+  @include flex-center
+  @include border-style
+  width: 500px
+  margin: auto
+  form
+    @include flex-center
+    padding: 10px
+    select
+      color: black
+      margin-bottom: 15px
+    input
+      margin-bottom: 15px

@@ -1,5 +1,5 @@
 <div>
-  <div>
+  <div class="create-article">
     <%= form_for(@article) do |f| %>
 
       <%= f.label :title %>
@@ -10,7 +10,7 @@
 
       <%= select_tag(:category_id, options_for_select(@categories)) %>
 
-      <%= f.file_field :image %>
+      <%= f.file_field :image, class: 'browse' %>
 
       <%= f.submit "Create Article" %>
     <% end %>
