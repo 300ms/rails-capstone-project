@@ -47,8 +47,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This project has been build for one of capstone experiment projects on Microverse Education.
 I tried to do my best in deadline but i will try to work on and improve this project ^^
 
@@ -75,7 +73,7 @@ try it in your local machine.
 
 ### Installation
 
-You can simply visit to use this app without installation: https://calm-meadow-41535.herokuapp.com/
+You can simply visit to use this app without installation: <a href="https://calm-meadow-41535.herokuapp.com/"><strong> On Heroku »</strong></a>
 
 1. Clone the repo
 ```sh
@@ -127,8 +125,6 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the MIT License.
-https://github.com/300ms/rails-capstone-project/blob/readme-rubocop/LICENSE
-
 
 <!-- CONTACT -->
 ## Contact
@@ -147,8 +143,6 @@ Deployment on heroku: [Github Repository](https://calm-meadow-41535.herokuapp.co
 * [ODIN Project](https://www.theodinproject.com/)
 * [Heroku](https://www.heroku.com/)
 * [GitHub](https://github.com/)
-* [ReadMe File](https://github.com/othneildrew)
-
 
 
 
