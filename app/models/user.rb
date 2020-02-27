@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :articles, class_name: 'Article', foreign_key: 'author_id', dependent: :destroy
   has_many :votes, foreign_key: 'user_id'
   has_many :voteds, through: :votes, source: :article
-
+  mount_uploader :image, ImageUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook]
 
