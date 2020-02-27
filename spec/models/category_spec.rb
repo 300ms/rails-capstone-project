@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
   before :each do
     @user = User.create!(email: 'foobar6@example.com', name: 'foo bar', password: 'foobar')
-    @article = Article.create(title: 'title123', text: 'text123', author_id: @user.id, category_id: "12345")
+    @article = Article.create(title: 'title123', text: 'text123', author_id: @user.id, category_id: '12345')
     @article2 = Article.create(title: 'title123', text: 'text123', author_id: @user.id, category_id: nil)
   end
 

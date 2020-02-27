@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ArticlesHelper
   def article_user_name(article)
     user = User.find(article.author_id)

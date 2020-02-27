@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
   def new
     @article = Article.new
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def show
@@ -18,7 +20,7 @@ class ArticlesController < ApplicationController
       flash[:success] = "You've posted successfully!"
       redirect_to articles_path
     else
-      flash[:success] = "You"
+      flash[:success] = 'You'
       render 'new'
     end
   end

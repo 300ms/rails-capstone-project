@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.feature "Articles", type: :feature do
+RSpec.feature 'Articles', type: :feature do
   scenario 'Sign up a new User and create and article' do
     visit root_path
     visit '/users/sign_up'
