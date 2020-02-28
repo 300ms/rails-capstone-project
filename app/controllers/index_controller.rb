@@ -9,5 +9,6 @@ class IndexController < ApplicationController
     end
     @top5 = @top5.sort_by { |_id, votes| votes }
     @top5 = @top5.last(3)
+    @top5 = Hash[@top5.to_a.reverse]
   end
 end
