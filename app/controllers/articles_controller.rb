@@ -28,6 +28,13 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all.order('articles.created_at DESC')
     @logged_in = user_signed_in?
+
+    @articles2 = Article.all.to_a
+    @top = {}
+    @articles2.each do |article|
+      @top[article.id] = article.votes.count
+    end
+    @top = @top.sort_by { |_id, votes| votes }
   end
 
   def destroy
