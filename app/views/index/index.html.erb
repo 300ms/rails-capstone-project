@@ -1,15 +1,98 @@
-<h1>Top 3 Articles</h1>
-<ul class="top3-list">
-<% i=1 %>
-  <% @top5.each do |art|%>
-    <% article = Article.find(art[0]) %>
-
-    <li class="best-<%= i %>">
-      <div class="article-image background-image">
-        <%= image_tag article.image.url if article.image? %>
-      </div>
+<div class="first-div">
+  <div class="top-1 weather first-article">
+    <div class="article-image background-image">
+      <% article = Article.find(@top1.first[0]) %>
+      <%= image_tag article.image.url if article.image? %>
+    </div>
+    <div class="article-content">
       <%= render article %>
-    </li>
-    <% i=i+1 %>
-  <% end %>
+    </div>
+  </div>
+
+  <div class="top-1 weather second-article">
+    <div class="article-image background-image">
+      <% article = Article.find(@top1.first[0]) %>
+      <%= image_tag article.image.url if article.image? %>
+    </div>
+    <div class="article-content">
+      <%= render article %>
+    </div>
+  </div>
+</div>
+
+<ul class="cats">
+  <li class="top-1">
+    <div class="article-image background-image">
+      <%= image_tag @cat_1.image.url if @cat_1.image? %>
+    </div>
+    <div class="article-content">
+      <div class="article-header">
+        <h3> <%= link_to Category.find(@cat_1.category_id).name, category_path(@cat_1.category_id) if @cat_1.category_id %> </h3>
+      </div>
+
+      <div class="article-footer">
+        <h3> <%= link_to @cat_1.title, article_path(@cat_1) %> </h3>
+      </div>
+    </div>
+  </li>
+
+  <li class="top-1">
+    <div class="article-image background-image">
+      <%= image_tag @cat_2.image.url if @cat_2.image? %>
+    </div>
+    <div class="article-content">
+      <div class="article-header">
+        <h3> <%= link_to Category.find(@cat_2.category_id).name, category_path(@cat_2.category_id) if @cat_2.category_id %> </h3>
+      </div>
+
+      <div class="article-footer">
+        <h3> <%= link_to @cat_2.title, article_path(@cat_2) %> </h3>
+      </div>
+    </div>
+  </li>
+
+  <li class="top-1">
+    <div class="article-image background-image">
+      <%= image_tag @cat_3.image.url if @cat_3.image? %>
+    </div>
+    <div class="article-content">
+      <div class="article-header">
+        <h3> <%= link_to Category.find(@cat_3.category_id).name, category_path(@cat_3.category_id) if @cat_3.category_id %> </h3>
+      </div>
+
+      <div class="article-footer">
+        <h3> <%= link_to @cat_3.title, article_path(@cat_3) %> </h3>
+      </div>
+    </div>
+  </li>
+
+  <li class="top-1">
+    <div class="article-image background-image">
+      <%= image_tag @cat_4.image.url if @cat_4.image? %>
+    </div>
+    <div class="article-content">
+      <div class="article-header">
+        <h3> <%= link_to Category.find(@cat_4.category_id).name, category_path(@cat_4.category_id) if @cat_4.category_id %> </h3>
+      </div>
+
+      <div class="article-footer">
+        <h3> <%= link_to @cat_4.title, article_path(@cat_4) %> </h3>
+      </div>
+    </div>
+  </li>
+
+  <li class="top-1">
+    <div class="article-image background-image">
+      <%= image_tag @cat_5.image.url if @cat_5.image? %>
+    </div>
+    <div class="article-content">
+      <div class="article-header">
+        <h3> <%= link_to Category.find(@cat_5.category_id).name, category_path(@cat_5.category_id) if @cat_5.category_id %> </h3>
+      </div>
+
+      <div class="article-footer">
+        <h3> <%= link_to @cat_5.title, article_path(@cat_5) %> </h3>
+      </div>
+    </div>
+  </li>
 </ul>

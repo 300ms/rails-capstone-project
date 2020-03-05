@@ -1,26 +1,10 @@
 <header class="header">
   <nav class="navbar">
-    <div class="nav-div border-split">
-      <h3> User Menu </h3>
-      <ul class="user-menu">
-        <%= link_to "Home", root_path, :class => "header-link" %>
-
-        <% if !user_signed_in? %>
-          <%= link_to "Sign up", new_user_registration_path, :class => "header-link" %>
-          <%= link_to "Sign in", new_user_session_path, :class => "header-link" %>
-        <% else %>
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "header-link" %>
-          <p class="user-info">Signed in as <%= current_user.email %></p>
-          <%= create_article_link %>
-        <% end %>
-
-        <%= link_to "Users", users_path, :class => "header-link", :id => 'users-index' %>
-        <%= link_to "Articles", articles_path, :class => "header-link" %>
-      </ul>
+    <div class="home-link">
+      <%= link_to "LifeStyle", root_path, :class => "header-link" %>
     </div>
 
-    <div class="nav-div nav-col">
-      <h3>Article Categories</h3>
+    <div class="nav-div nav-cats">
       <ul class="category-list">
         <% Category.all.each do |category| %>
           <li class="dropdown">
@@ -29,5 +13,19 @@
         <% end %>
       </ul>
     </div>
+
+    <div class="nav-div nav-user">
+      <ul class="user-menu">
+        <% if user_signed_in? %>
+          <%= create_article_link %>
+          <p class="user-info">Signed in as <%= current_user.email %></p>
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "header-link" %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => "header-link" %>
+          <%= link_to "Sign in", new_user_session_path, :class => "header-link" %>
+        <% end %>
+      </ul>
+    </div>
+
   </nav>
 </header>
