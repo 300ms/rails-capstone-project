@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/users' => 'users#index'
   get 'users/:id' => 'users#show', as: :user
 
-  resources :articles
-  resources :votes
-  resources :categories
+  resources :articles, only: [:index, :new, :show, :create, :destroy]
+  resources :votes, only: [:create, :destroy]
+  resources :categories, only: [:index, :show]
 end
