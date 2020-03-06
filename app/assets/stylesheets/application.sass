@@ -50,7 +50,6 @@ body
     width: 250px
     text-align: center
 
-
 .header
   height: fit-content
   font-weight: bold
@@ -104,18 +103,6 @@ body
   padding: 0
   margin: auto
 
-.weather
-  display: inline-flex
-
-.first-article
-  margin-left: 10px
-  width: 65%
-
-.second-article
-  float: right
-  margin-right: 10px
-  width: 30%
-
 .article-header
   @include flex-center
   width: 100%
@@ -127,6 +114,7 @@ body
 .user-article-index,
 .user-post-index
   @include flex-center
+  margin-bottom: 50px
   li
     @include flex-center
     @include border-style
@@ -187,12 +175,5 @@ body
 .row
   @include flex-center
 
-.cats
-  display: flex
-  flex-direction: row
-  li
-    margin: 10px
-    max-height: 250px
-
-.category-header
-  color: gray
+@import "categories.sass"
+@import "index.sass"
