@@ -1,5 +1,20 @@
 $brown: #ffa366
 
+@mixin border-style
+  border-radius: 5px
+  border-width: medium
+  border-color: gray
+  border-style: solid
+
+@mixin flex-center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@mixin background-fade
+  background: rgb(0,0,0)
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6208683302422531) 50%, rgba(0,0,0,1) 100%)
+
 .category-header
   color: black
 
