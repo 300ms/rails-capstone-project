@@ -1,3 +1,12 @@
+@mixin flex-center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@mixin background-fade
+  background: rgb(0,0,0)
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6208683302422531) 50%, rgba(0,0,0,1) 100%)
+
 .article-header
   @include flex-center
   width: 100%
