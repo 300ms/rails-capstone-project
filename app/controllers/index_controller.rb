@@ -10,10 +10,10 @@ class IndexController < ApplicationController
     @top1 = @top1.sort_by { |_id, votes| votes }
     @top1 = @top1.last(1)
 
-    @cat_1 = Article.find_by(category_id: 1)
-    @cat_2 = Article.find_by(category_id: 2)
-    @cat_3 = Article.find_by(category_id: 3)
-    @cat_4 = Article.find_by(category_id: 4)
-    @cat_5 = Article.find_by(category_id: 5)
+    @cat1 = Article.find_by(category_id: 1)
+    @cat2 = Article.find_by(category_id: 2)
+    @cat3 = Article.find_by(category_id: 3)
+    @cat4 = Article.find_by(category_id: 4)
+    @cat5 = Article.find_by(category_id: 5)
   end
 end
