@@ -1,7 +1,7 @@
 <div class="first-div">
   <div class="top-1 weather first-article">
     <div class="article-image background-image">
-      <% article = Article.find(@top1.first[0]) %>
+      <% article = @top1 %>
       <%= image_tag article.image.url if article.image? %>
     </div>
     <div class="article-content">
@@ -11,7 +11,7 @@
 
   <div class="top-1 weather second-article">
     <div class="article-image background-image">
-      <% article = Article.find(@top1.first[0]) %>
+      <% article = @top1 %>
       <%= image_tag article.image.url if article.image? %>
     </div>
     <div class="article-content">
