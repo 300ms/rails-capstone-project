@@ -19,7 +19,7 @@ $brown: #ffa366
 @mixin border-style
   border-radius: 5px
   border-width: medium
-  border-color: gray
+  border-color: $brown
   border-style: solid
 
 @mixin flex-center
@@ -29,7 +29,7 @@ $brown: #ffa366
 
 @mixin background-fade
   background: rgb(0,0,0)
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6208683302422531) 50%, rgba(0,0,0,1) 100%)
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 100%)
 
 body
   background-color: #ffb380
@@ -163,6 +163,44 @@ form
 
 .row
   @include flex-center
+
+#error_explanation
+  h2
+    display: none
+  ul
+    margin: 10px
+    li
+      font-size: 12px
+      color: red
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
