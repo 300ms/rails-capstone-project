@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.feature 'Create new User', type: :feature do
   scenario 'Sign up a new User' do
-    visit root_path
     visit '/users/sign_up'
 
     fill_in 'user_name', with: 'Foo Bar'

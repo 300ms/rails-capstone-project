@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.feature 'Votes', type: :feature do
   scenario 'Sign up a new User and create and article, then vote the article' do
-    visit root_path
     visit '/users/sign_up'
 
     fill_in 'user_name', with: 'Foo Bar'
