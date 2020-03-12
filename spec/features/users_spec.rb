@@ -14,4 +14,16 @@ RSpec.feature 'Create new User', type: :feature do
     click_button 'commit'
     expect(page).to have_text('abc@xyz.com')
   end
+
+  scenario 'Sign up error for a new User' do
+    visit '/users/sign_up'
+
+    fill_in 'user_name', with: 'Foo Bar'
+    fill_in 'user_email', with: ''
+    fill_in 'user_password', with: 'foobar'
+    fill_in 'user_password_confirmation', with: 'foobar'
+    fill_in 'user_birthday', with: '12/12/2012'
+    click_button 'commit'
+    expect(page).to have_text('Email can\'t be blank')
+  end
 end
