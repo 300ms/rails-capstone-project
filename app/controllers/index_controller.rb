@@ -2,11 +2,8 @@
 
 class IndexController < ApplicationController
   def index
-    if Article.top_voted(1)[0].nil?
-      @top1 = Article.find(1)
-    else
-      @top1 = Article.find(Article.top_voted(1)[0].id)
-    end
+    Article.top_voted(1)[0].nil? ? @top1 = Article.first : @top1 = Article.find(Article.top_voted(1)[0].id)
+
     @cat1 = Article.find_by(category_id: 1)
     @cat2 = Article.find_by(category_id: 2)
     @cat3 = Article.find_by(category_id: 3)

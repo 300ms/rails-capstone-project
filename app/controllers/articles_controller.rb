@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     @article.category_id = params[:category_id]
     if @article.save
       flash[:success] = "You've posted successfully!"
-      redirect_to articles_path
+      redirect_to article_path(@article)
     else
       flash[:success] = 'You'
       render 'new'

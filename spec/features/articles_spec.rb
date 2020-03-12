@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.feature 'Articles', type: :feature do
   scenario 'Sign up a new User and create and article' do
-    visit root_path
     visit '/users/sign_up'
 
     fill_in 'user_name', with: 'Foo Bar'
@@ -14,6 +13,7 @@ RSpec.feature 'Articles', type: :feature do
     fill_in 'user_birthday', with: '12/12/2012'
     click_button 'commit'
     expect(page).to have_text('abc@xyz.com')
+
 
     visit '/articles/new'
     fill_in 'article_title', with: 'Title 1'
