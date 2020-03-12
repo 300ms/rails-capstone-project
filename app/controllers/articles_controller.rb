@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.order(created_at: :desc)
+    @articles = Article.all.order(created_at: :desc).includes(:author, :category, :votes)
     @logged_in = user_signed_in?
   end
 

@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   validates :text, presence: true, length: { maximum: 140 }
   mount_uploader :image, ImageUploader
 
-  def self.top_voted(num = 10)
+  def self.top_voted(num = 1)
     select("articles.id, count(votes.id) AS votes_count")
     .joins(:votes)
     .group("articles.id")
