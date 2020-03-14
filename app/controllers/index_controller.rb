@@ -2,7 +2,7 @@
 
 class IndexController < ApplicationController
   def index
-    Article.top_voted(1)[0].nil? ? @top1 = Article.first : @top1 = Article.find(Article.top_voted(1)[0].id)
+    @top1 = Article.top_voted(1)[0].nil? ? Article.first : Article.find(Article.top_voted(1)[0].id)
 
     @cat1 = Article.find_by(category_id: 1)
     @cat2 = Article.find_by(category_id: 2)

@@ -9,10 +9,10 @@ class Article < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def self.top_voted(num = 1)
-    select("articles.id, count(votes.id) AS votes_count")
-    .joins(:votes)
-    .group("articles.id")
-    .order("votes_count DESC")
-    .limit(num)
+    select('articles.id, count(votes.id) AS votes_count')
+      .joins(:votes)
+      .group('articles.id')
+      .order('votes_count DESC')
+      .limit(num)
   end
 end

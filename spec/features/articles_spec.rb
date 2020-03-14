@@ -14,7 +14,6 @@ RSpec.feature 'Articles', type: :feature do
     click_button 'commit'
     expect(page).to have_text('abc@xyz.com')
 
-
     visit '/articles/new'
     fill_in 'article_title', with: 'Title 1'
     fill_in 'article_text', with: 'Text 1'
