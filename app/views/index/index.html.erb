@@ -1,20 +1,20 @@
 <div class="first-div">
   <div class="top-1 weather first-article">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <% article = @top1 %>
       <%= image_tag article.image.url if article.image? %>
     </div>
-    <div class="article-content">
+    <div class="article-content-2">
       <%= render article %>
     </div>
   </div>
 
   <div class="top-1 weather second-article">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <% article = @top1 %>
       <%= image_tag article.image.url if article.image? %>
     </div>
-    <div class="article-content">
+    <div class="article-content-2">
       <%= render article %>
     </div>
   </div>
@@ -22,75 +22,75 @@
 
 <ul class="cats">
   <li class="top-1">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <%= image_tag @cat1.image.url if @cat1.image? %>
     </div>
-    <div class="article-content">
-      <div class="article-header">
+    <div class="article-content-2">
+      <div class="article-header-2">
         <h3> <%= link_to Category.find(@cat1.category_id).name, category_path(@cat1.category_id) if @cat1.category_id %> </h3>
       </div>
 
-      <div class="article-footer">
+      <div class="article-footer-2">
         <h3> <%= link_to @cat1.title, article_path(@cat1) %> </h3>
       </div>
     </div>
   </li>
 
   <li class="top-1">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <%= image_tag @cat2.image.url if @cat2.image? %>
     </div>
-    <div class="article-content">
-      <div class="article-header">
+    <div class="article-content-2">
+      <div class="article-header-2">
         <h3> <%= link_to Category.find(@cat2.category_id).name, category_path(@cat2.category_id) if @cat2.category_id %> </h3>
       </div>
 
-      <div class="article-footer">
+      <div class="article-footer-2">
         <h3> <%= link_to @cat2.title, article_path(@cat2) %> </h3>
       </div>
     </div>
   </li>
 
   <li class="top-1">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <%= image_tag @cat3.image.url if @cat3.image? %>
     </div>
-    <div class="article-content">
-      <div class="article-header">
+    <div class="article-content-2">
+      <div class="article-header-2">
         <h3> <%= link_to Category.find(@cat3.category_id).name, category_path(@cat3.category_id) if @cat3.category_id %> </h3>
       </div>
 
-      <div class="article-footer">
+      <div class="article-footer-2">
         <h3> <%= link_to @cat3.title, article_path(@cat3) %> </h3>
       </div>
     </div>
   </li>
 
   <li class="top-1">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <%= image_tag @cat4.image.url if @cat4.image? %>
     </div>
-    <div class="article-content">
-      <div class="article-header">
+    <div class="article-content-2">
+      <div class="article-header-2">
         <h3> <%= link_to Category.find(@cat4.category_id).name, category_path(@cat4.category_id) if @cat4.category_id %> </h3>
       </div>
 
-      <div class="article-footer">
+      <div class="article-footer-2">
         <h3> <%= link_to @cat4.title, article_path(@cat4) %> </h3>
       </div>
     </div>
   </li>
 
   <li class="top-1">
-    <div class="article-image background-image">
+    <div class="article-image-2 background-image-2">
       <%= image_tag @cat5.image.url if @cat5.image? %>
     </div>
-    <div class="article-content">
-      <div class="article-header">
+    <div class="article-content-2">
+      <div class="article-header-2">
         <h3> <%= link_to Category.find(@cat5.category_id).name, category_path(@cat5.category_id) if @cat5.category_id %> </h3>
       </div>
 
-      <div class="article-footer">
+      <div class="article-footer-2">
         <h3> <%= link_to @cat5.title, article_path(@cat5) %> </h3>
       </div>
     </div>

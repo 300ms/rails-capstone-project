@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
       flash[:success] = "You've posted successfully!"
       redirect_to article_path(@article)
     else
-      flash[:success] = 'You'
+      flash[:error] = 'Creation has failed!'
       render 'new'
     end
   end

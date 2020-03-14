@@ -25,6 +25,6 @@
   </div>
   <h6>Updated at: <%= article.updated_at %></h6>
   <div class="article-category">
-    <%= link_to Category.find(article.category_id).name, category_path(article.category_id) if article.category_id %>
+    <%= link_to article.category.name, category_path(article.category_id) if article.category_id %>
   </div>
 </div>
