@@ -7,6 +7,6 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.includes(:articles).find(params[:id])
-    @articles = Article.where(category_id: @category.id)
+    @articles = Article.where(category_id: @category.id).includes(:author, :category, :votes)
   end
 end
