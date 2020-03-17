@@ -10,14 +10,13 @@ RSpec.describe VotesController, type: :controller do
 
   context 'with valid details' do
     it 'should create vote' do
-      @vote = Vote.create!(user_id: @user.id, article_id: @article.id)
+      expect(Vote.create!(user_id: @user.id, article_id: @article.id)).to be_valid
     end
   end
 
   context 'with invalid details' do
     it 'should fail to create a vote' do
-      @vote = Vote.create(user_id: @user.id, article_id: nil)
-      expect(@vote).to be_invalid
+      expect(Vote.create(user_id: nil, article_id: @article.id)).to be_invalid
     end
   end
 end
