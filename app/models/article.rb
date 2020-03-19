@@ -15,4 +15,16 @@ class Article < ApplicationRecord
       .order('votes_count DESC')
       .limit(num)
   end
+
+  def self.first_five()
+    top1 = Article.top_voted(1)[0].nil? ? Article.first : Article.find(Article.top_voted(1)[0].id)
+
+    cat1 = Article.find_by(category_id: 1)
+    cat2 = Article.find_by(category_id: 2)
+    cat3 = Article.find_by(category_id: 3)
+    cat4 = Article.find_by(category_id: 4)
+    cat5 = Article.find_by(category_id: 5)
+
+    return five = [top1, cat1, cat2, cat3, cat4, cat5]
+  end
 end

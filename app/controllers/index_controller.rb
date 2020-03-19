@@ -2,12 +2,13 @@
 
 class IndexController < ApplicationController
   def index
-    @top1 = Article.top_voted(1)[0].nil? ? Article.first : Article.find(Article.top_voted(1)[0].id)
+    five = Article.first_five
 
-    @cat1 = Article.find_by(category_id: 1)
-    @cat2 = Article.find_by(category_id: 2)
-    @cat3 = Article.find_by(category_id: 3)
-    @cat4 = Article.find_by(category_id: 4)
-    @cat5 = Article.find_by(category_id: 5)
+    @top1 = five[0]
+    @cat1 = five[1]
+    @cat2 = five[2]
+    @cat3 = five[3]
+    @cat4 = five[4]
+    @cat5 = five[5]
   end
 end
