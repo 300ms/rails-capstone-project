@@ -17,19 +17,23 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: rails_dev
+  password: 136479asd
+  host: localhost
+  port: 5432
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: rails_capstone_project_development
+  database: rails_capstone_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: rails_capstone_project
+  #username: facebook_clone
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_capstone_project_test
+  database: rails_capstone_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +84,4 @@ test:
 #
 production:
   <<: *default
-  database: rails_capstone_project_production
-  username: rails_capstone_project
-  password: <%= ENV['RAILS_CAPSTONE_PROJECT_DATABASE_PASSWORD'] %>
+  database: rails_capstone_production

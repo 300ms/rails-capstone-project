@@ -1,0 +1,30 @@
+<div class="article-header">
+  <h3> <%= link_to article.title, article_path(article) %> </h3>
+  <h6> <%= article_user_name(article) %> </h6>
+</div>
+
+<div class="article-footer">
+  <p><%= article.text %></p>
+  <% unless current_user.nil? %>
+    <div class="vote-unvote">
+      <% unless current_user.voted_article?(article) %>
+        <%= form_for(current_user.votes.build) do |f| %>
+          <%= hidden_field_tag :article_id, article.id %>
+          <%= f.submit 'Vote Article' %>
+        <% end %>
+      <% else %>
+        <%= form_for(current_user.votes.find_by(article_id: article.id), html: {method: :delete}) do |f| %>
+          <%= hidden_field_tag :article_id, article.id %>
+          <%= f.submit 'Unvote Article' %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="likes">
+    <p>Votes: <%= article.votes.count %></p>
+  </div>
+  <h6>Updated at: <%= article.updated_at %></h6>
+  <div class="article-category">
+    <%= link_to article.category.name, category_path(article.category_id) if article.category_id %>
+  </div>
+</div>

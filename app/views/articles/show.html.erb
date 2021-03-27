@@ -1,0 +1,14 @@
+<div class="user-article-index-2">
+  <div class="header-image">
+    <%= image_tag @article.image.url if @article.image? %>
+  </div>
+  <%= render @article %>
+  <% user = User.find(@article.author_id) %>
+  <p>Author: <%= link_to user.name, user_path(user) %></p>
+  <p>
+    <% if user_signed_in? && current_user.id == @article.author_id %>
+      <%= link_to "Delete" , article_path(@article), method: :delete,data: {confirm: "Are you sure ?"} %>
+    <% end %>
+    <%= link_to "Articles" , articles_path %>
+  </p>
+</div>

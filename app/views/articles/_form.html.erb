@@ -1,0 +1,19 @@
+<div>
+  <h1 class="new-article">Create Article</h1>
+  <div class="create-article">
+    <%= form_for(@article) do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :text %>
+      <%= f.text_area :text %>
+
+      <%= select_tag(:category_id, options_for_select(@categories)) %>
+
+      <%= f.file_field :image, class: 'browse' %>
+
+      <%= f.submit "Create Article" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsCapstoneProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta property="og:image" content="app\assets\images\rails-capstone-image.png">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <%= render 'layouts/header' %>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
